@@ -2,7 +2,7 @@ import { useRef } from "react";
 import classes from "./NewTask.module.css";
 import Button from "./UI/Button";
 
-const NewTask = () => {
+const NewTask = (props) => {
   const taskRef = useRef();
 
   const formSubmitHandler = (event) => {
@@ -11,13 +11,14 @@ const NewTask = () => {
     if (enteredTask.trim().length > 0) {
       console.log("Got it!");
     }
+    props.onAddTask(enteredTask);
     event.target.reset();
   };
 
   return (
     <form onSubmit={formSubmitHandler} className={classes.form}>
       <input placeholder="Enter your task" ref={taskRef} className={classes.input}></input>
-      <Button>+</Button>
+      <Button className={classes.btn}>+</Button>
     </form>
   );
 };
