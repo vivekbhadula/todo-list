@@ -19,7 +19,7 @@ function App() {
     <div>
       <h1>ToDo List</h1>
       <NewTask onAddTask={onAddTask}/>
-      <ShowTask tasks={tasksList}/>
+      {tasksList.length > 0 && <ShowTask tasks={tasksList}/>}
     </div>
   );
 }
