@@ -1,0 +1,29 @@
+.form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 5px 5px 5px 5px #eeeeee;
+    border-radius: 10px;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.input {
+  border: 2px solid #999999;
+  border-radius: 5px;
+  padding: 10px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  margin-bottom: 25px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.input:focus {
+    outline: none;
+}
