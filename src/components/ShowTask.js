@@ -7,7 +7,7 @@ const ShowTask = (props) => {
       <ul>
         {props.tasks.map((task) => (
           <li key={task.id}>
-            {task.taskText} <Button className={classes.btn}>x</Button>
+            {task.taskText} <Button className={classes.btn} onClick={props.onDelete}>x</Button>
           </li>
         ))}
       </ul>
